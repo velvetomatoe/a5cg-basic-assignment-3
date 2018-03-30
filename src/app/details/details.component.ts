@@ -22,7 +22,8 @@ export class DetailsComponent implements OnInit {
 
   toggleDetails() {
     this.showDetails = !this.showDetails;
-    this.clicks.push(this.clicks.length + 1);
+    // this.clicks.push(this.clicks.length + 1);
+    this.clicks.push(new Date());
   }
 
 }

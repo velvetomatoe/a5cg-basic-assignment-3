@@ -6,9 +6,9 @@
   Secret Password = Tuna
 </p>
 <div 
-  *ngFor="let clickItem of clicks"
-  [ngStyle]="{'background-color': clickItem >= 5 ? 'blue' : 'transparent'}"
-  [ngClass]="{'display-active':  clickItem >= 5}"
+  *ngFor="let clickItem of clicks; let i = index"
+  [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'display-active':  i >= 4}"
 >
   {{ clickItem }}
 </div>
