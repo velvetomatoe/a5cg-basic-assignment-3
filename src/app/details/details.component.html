@@ -2,11 +2,13 @@
 <br /><br />
 <p 
   *ngIf="showDetails"
-  [ngStyle]="{'background-color': getStyleDetails()}"
-  [ngClass]="{'display-active': clicks >= 5}"
 >
   Secret Password = Tuna
 </p>
-
-<br /><br />
-<p># of Times Button has been clicked: {{clicks}}</p>
+<div 
+  *ngFor="let clickItem of clicks"
+  [ngStyle]="{'background-color': clickItem >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'display-active':  clickItem >= 5}"
+>
+  {{ clickItem }}
+</div>

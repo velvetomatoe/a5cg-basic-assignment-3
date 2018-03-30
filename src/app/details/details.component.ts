@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class DetailsComponent implements OnInit {
 
   showDetails = false;
-  clicks = 0;
+  clicks = [];
 
   constructor() { }
 
@@ -21,14 +21,8 @@ export class DetailsComponent implements OnInit {
   }
 
   toggleDetails() {
-    ((this.showDetails) ? this.showDetails = false : this.showDetails = true);
-
-    this.clicks++;
-    console.log(this.clicks);
+    this.showDetails = !this.showDetails;
+    this.clicks.push(this.clicks.length + 1);
   }
-
-  getStyleDetails() {
-		return this.clicks >= 5 ? 'blue' : '';
-	}
 
 }
