@@ -1,0 +1,12 @@
+<button class="btn btn-primary" (click)="toggleDetails()">Display Details</button>
+<br /><br />
+<p 
+  *ngIf="showDetails"
+  [ngStyle]="{'background-color': getStyleDetails()}"
+  [ngClass]="{'display-active': clicks >= 5}"
+>
+  Secret Password = Tuna
+</p>
+
+<br /><br />
+<p># of Times Button has been clicked: {{clicks}}</p>
